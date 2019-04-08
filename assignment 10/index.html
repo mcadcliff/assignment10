@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Assignment 10</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    
+    <body>
+        <h1>Bottle Caps</h1>
+        
+        <div id="app" v-cloak>
+            <table>
+                <thead>
+                <tr>
+                    <th>Picture</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Location</th>
+                    <th>Year</th>
+                </tr>
+                </thead>
+                
+                <tbody v-for="(bottlecap, index) in console">
+                    <tr v-bind:class="{favorite:index===5, ordinary:index!===5}">
+                        
+                    <td id="image">
+                    <img v-bind:src="bottlecap.imgSrc" v-bind:alt="bottlecap.name"></td>
+                        
+                    <td>{{bottlecap.name}}</td>
+                    <td>{{bottlecap.type}}</td>
+                    <td>{{bottlecap.location}}</td>
+                    <td>{{bottlecap.year}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <div id="key">
+            <p>my favorite bottle cap is in yellow</p>
+        </div>
+        
+        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+        <script src="script.js"></script>
+    </body>
+</html>
