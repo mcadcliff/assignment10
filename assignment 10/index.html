@@ -21,8 +21,8 @@
                 </tr>
                 </thead>
                 
-                <tbody v-for="(bottlecap, index) in console">
-                    <tr v-bind:class="{favorite:index===5, ordinary:index!===5}">
+                <tbody v-for="(bottlecap, index) in bottlecaps">
+                    <tr v-bind:class="{favorite: bottlecap.favorite, ordinary:!bottlecap.favorite}">
                         
                     <td id="image">
                     <img v-bind:src="bottlecap.imgSrc" v-bind:alt="bottlecap.name"></td>
